@@ -1,0 +1,46 @@
+Nume: Moise Ioan-Vlad
+Grupa : 321CC
+Timp alocat rezolvarii: 25-30 Ore
+Grad de dificultate: Mediu
+
+// IMPORTANT trebuie deschis fisierul mda_amTema cu Intelij nu fisierul temaPOOaoloo, altfel am erori
+
+Clase folosite:
+
+Game:
+Nucleul jocului, implementeaza sistemul de login prin parsarea unui
+json care preia datele despre cont care se afla dupa diverse String-uri si
+trateaza miscarile pe tabla de joc.
+
+Grid:
+Grid-ul se ocupa cu generarea efectiva a hartii si plasarea componentelor de pe
+harta in celule random. Componentele sunt de tip Cell si sunt stocate intr-un
+ArrayList pentru a putea fi accesate/modificate mai usor.
+
+GameCombat:
+Clasa care se declanseaza atunci cand player-ul ajunge la o celula "ENEMY",
+marcata cu E pe harta. Se desfasoara un combat pe miscari, intre un inamic cu
+abilitati generate random si player-ul care are exact 3 abilitati,
+mai exact: "Fire", "Ice", "Earth".
+
+Spell:
+Clasa care descrie atacurile speciale folosite in combat,"Fire", Ice", "Earth".
+
+Character:
+Clasa ce se ocupa de constructia caracterului care parcurge harta.
+Din aceasta clasa se mostenesc 3 tipuri de caractere, "Mage", "Rogue" si
+"Warrior" ce reprezinta TIPUL de caracter impus. Tipul de caracter si el la
+selectia caracterului din JSON.
+
+Account:
+Clasa ce retine informatiile esentiale preluate din JSON pentru prelucrare.
+
+Credentials:
+Clasa ce retine email-ul si parola jucatorilor.
+
+Mentionez ca versiunea trimisa a jocului este cea hardcodata si la generarea
+hartii se impune dimensiunea hartii a fii 5x5 iar evenimentele sa fie asezate
+strict in anumite locuri. In clasa GAME am adaugat comentarii aferente cu ce
+trebuie modificat pentru a putea rula jocul normal, la fel si in GRID la metoda
+generateMap, unde trebuie decomentate niste linii ca jocul sa ruleze natural
+si hartiile sa se genereze mereu random.
